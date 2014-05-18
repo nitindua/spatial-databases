@@ -1,14 +1,11 @@
 Name - Nitin Dua
-USC ID - 4563947761
-Username - nitindua@usc.edu
-
 
 List of submitted files
 -----------------------
 1. createdb.sql
 2. dropdb.sql
 3. populate.java
-4. HW2.java
+4. SPDB.java
 5. map.jpg
 6. sdoapi.jar
 7. readme.txt
@@ -17,7 +14,7 @@ My java files structure is same as in the zip. Both my java files are inside the
 
 The assignment has developed using Eclipse.
 
-Resolution of Homework
+Resolution Details
 ----------------------
 Using createdb.sql, I am creating three tables: Buildings, Students and AnnouncementSystems. Firstly, in case of Buildings, each building shape is being stored as a polygon of type SDO_GEOMETRY. Secondly, for students, the (x,y) co-ordinate of the position of the student is  being stored as a point using SDO_GEOMETRY data type. Lastly, the center's of each announcement system is being stored as a point of type SDO_GEOMETRY and the shape, ie coverage area in the form of a circle(special polygon), is also being stored of type SDO_GEOMETRY.
 I am adding the description of these spatial data columns to the metadata 'USER_SDO_GEOM_METADATA'. Thus for each spatial data column there will be an insert statement. 
@@ -25,7 +22,7 @@ Finally, index of each spatial data column is being created.
 
 populate.java takes in the file names as command line arguments. Before inserting, all tables rows are first deleted. Insertions are according to the schema declared in createdb.sql, for each file, by making use of SDO_GEOMETRY to insert the spatial data objects.
 
-HW2.java consists of the GUI which has been designed using Swing api. It also consists of the resolution of all the 5 required query types. A summary of eqach query type is as below:
+SPDB.java consists of the GUI which has been designed using Swing api. It also consists of the resolution of all the 5 required query types. A summary of eqach query type is as below:
 
 A) Whole Region - Based on the active elements which are checked, I am running a simple query to output the spatial data of those selected objects. 
 
@@ -51,7 +48,7 @@ For populate.java, files should be placed in the main project folder and command
 
 External jars being used for populate.java - classes111.jar  
 
-External jars being used for HW2.java - classes111.jar and sdoapi.jar.
+External jars being used for SPDB.java - classes111.jar and sdoapi.jar.
  
 Both these JAR files need to be added to the build path by configuring the build path and selecting 'add external jars' option.
 
